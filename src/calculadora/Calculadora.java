@@ -21,10 +21,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 public class Calculadora extends JFrame implements ActionListener{
-	/**
-	 * 
-	 */
-	Operacoes classOperacoes = new Operacoes();
+
 	private static final long serialVersionUID = 1L;
 	static public boolean temp= true;
 	static public String sinal = "";
@@ -326,12 +323,12 @@ public class Calculadora extends JFrame implements ActionListener{
 					else
 						jtDisplay2.setText("" + valorTotal);
 				} else {
-						if (clicouFuncao)
-							jtDisplay1.setText("" + jtDisplay1.getText() + " " + operadores[i]);
-						else
-							jtDisplay1.setText("" + jtDisplay1.getText() + jtDisplay2.getText() + operador);
-						jtDisplay2.setText("");
-						clicouFuncao = false;
+					if (clicouFuncao)
+						jtDisplay1.setText("" + jtDisplay1.getText() + " " + operadores[i]);
+					else
+						jtDisplay1.setText("" + jtDisplay1.getText() + jtDisplay2.getText() + operador);
+					jtDisplay2.setText("");
+					clicouFuncao = false;
 				}
 			}
 		
